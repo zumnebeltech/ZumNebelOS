@@ -14,7 +14,7 @@ set -ouex pipefail
 # dnf -y config-manager addrepo --from-repofile="https://negativo17.org/repos/fedora-multimedia.repo
 # Enabling needed COPRs
 dnf -y copr enable bieszczaders/kernel-cachyos
-dnf -y  copr enable bieszczaders/kernel-cachyos-addons
+dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable pgdev/ghostty
 dnf -y copr enable peterwu/iosevka
 dnf -y copr enable solopasha/hyprland
@@ -23,7 +23,15 @@ dnf -y copr enable atim/starship
 dnf -y copr enable peterwu/iosevka
 
 # Installing extra packages over Workstation
-dnf -y install fish atuin hyprland hyprland-plugin-hyprbars stow hyprlock hypridle hyprpaper hyprlock hyprshot hyprdim hyprsunset cliphist waybar waypaper blueman network-manager-applet xwaylandvideobridge udiskie mpv feh zoxide jq qt6ct qt5ct qt6-qtwayland qt5-qtwayland copyq lsd ImageMagick GraphicsMagick swww wlogout wl-paste wl-clipboard wl-copy nwg-clipman nwg-shell-config nwg-drawer python-psutil fd brightnessctl btrbk micro restic bat cosmic-term starship swaync cargo satty vips uwsm breeze-gtk plasma-breeze rsms-inter{,-vf}-fonts jetbrains-mono-fonts-all iosevka-etoile-fonts meson cmake scdoc dmenu python3-pyxdg python3-dbus gtk3-devel gtk4-devel gobject-introspection-devel gtk-layer-shell-devel kdeconnectd kde-connect-nautilus alacritty kitty btrbk libcap-ng libcap-ng-devel procps-ng procps-ng-devel cachyos-ksm-settings kernel-cachyos kernel-cachyos-devel-matched zoxide direnv opendoas
+dnf -y install \
+fish atuin hyprland hyprland-plugin-hyprbars stow hyprlock hypridle hyprpaper hyprlock hyprshot hyprdim hyprsunset \
+cliphist waybar waypaper blueman network-manager-applet xwaylandvideobridge udiskie mpv feh zoxide jq qt6ct qt5ct \
+qt6-qtwayland qt5-qtwayland copyq lsd ImageMagick GraphicsMagick swww wlogout wl-paste wl-clipboard wl-copy \
+nwg-clipman nwg-shell-config nwg-drawer python-psutil fd brightnessctl btrbk micro restic bat cosmic-term starship \
+swaync cargo satty vips uwsm breeze-gtk plasma-breeze rsms-inter{,-vf}-fonts jetbrains-mono-fonts-all iosevka-etoile-fonts \
+meson cmake scdoc dmenu python3-pyxdg python3-dbus gtk3-devel gtk4-devel gobject-introspection-devel gtk-layer-shell-devel \
+kdeconnectd kde-connect-nautilus alacritty kitty btrbk zoxide direnv opendoas
+#dnf -y install libcap-ng libcap-ng-devel procps-ng procps-ng-devel cachyos-ksm-settings kernel-cachyos kernel-cachyos-devel-matched
 
 #pushd /etc/yum.repos.d || return
 #curl -sL# https://raw.githubusercontent.com/zumnebeltech/ZumNebelOS/refs/heads/main/<filename>
