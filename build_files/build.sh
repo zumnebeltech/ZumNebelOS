@@ -25,10 +25,11 @@ dnf -y copr enable peterwu/iosevka
 # Installing extra packages over Workstation
 dnf -y install fish atuin hyprland hyprland-plugin-hyprbars stow hyprlock hypridle hyprpaper hyprlock hyprshot hyprdim hyprsunset cliphist waybar waypaper blueman network-manager-applet xwaylandvideobridge udiskie mpv feh zoxide jq qt6ct qt5ct qt6-qtwayland qt5-qtwayland copyq lsd ImageMagick GraphicsMagick swww wlogout wl-paste wl-clipboard wl-copy nwg-clipman nwg-shell-config nwg-drawer python-psutil fd brightnessctl btrbk micro restic bat cosmic-term starship swaync cargo satty vips uwsm breeze-gtk plasma-breeze rsms-inter{,-vf}-fonts jetbrains-mono-fonts-all iosevka-etoile-fonts meson cmake scdoc dmenu python3-pyxdg python3-dbus gtk3-devel gtk4-devel gobject-introspection-devel gtk-layer-shell-devel kdeconnectd kde-connect-nautilus alacritty kitty btrbk libcap-ng libcap-ng-devel procps-ng procps-ng-devel cachyos-ksm-settings kernel-cachyos kernel-cachyos-devel-matched zoxide direnv opendoas
 
-pushd /etc/yum.repos.d || return
-curl -sL# https://raw.githubusercontent.com/zumnebeltech/ZumNebelOS/refs/heads/main/artifacthub-repo.yml
-popd
+#pushd /etc/yum.repos.d || return
+#curl -sL# https://raw.githubusercontent.com/zumnebeltech/ZumNebelOS/refs/heads/main/<filename>
+#popd
 
+mkdir -pv /etc/kernel/postinst.d
 pushd /etc/kernel/postinst.d || return
 curl -sOL# https://raw.githubusercontent.com/zumnebeltech/ZumNebelOS/refs/heads/main/00-signing-cachyos-kernel
 curl -sOL# https://raw.githubusercontent.com/zumnebeltech/ZumNebelOS/refs/heads/main/99-cachyos-default
