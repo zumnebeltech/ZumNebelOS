@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -o errexit
+
+set_cachyos_as_default() {
+
+    local most_recent
+    most_recent="$(basename $(find /boot -name "vmlinuz*cachy*.*" | sort --version-sort | tail --lines=1))"
+
+    grubby --set-default=/boot/"${most_recent}"
+
+}
+
+set_cachyos_as_default

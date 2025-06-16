@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -o errexit
+
+sigining_cachyos_kernel() {
+
+    local KERNEL_IMAGE
+    local MOK_KEY_NICKNAME
+    local PESIGN_EXEC
+
+    shift
+    KERNEL_IMAGE="$1"
+    MOK_KEY_NICKNAME="CachyOS Secure Boot"
+    PESIGN_EXEC="$(command -v pesign)"
+
+    if [ "${#}" -ne "2" ]; then
+        printf "%s\n" "Wrong count of command line arguments. This is not meant to be called directly." >&2
+        exit 1
+    fi
+
+    if [ ! -x "${PESIGN_EXEC}" ]; then
+        printf "%s\n" "pesign not executable. Bailing." >&2
+        exit 1
+    fi
+
+    if [ ! -w "${KERNEL_IMAGE}" ]; then
+        printf "Kernel image %s is not writable.\n" "${KERNEL_IMAGE}" >&2
+        exit 1
+    fi
+
+    printf "Signing %s...\n" "${KERNEL_IMAGE}"
+
+    pesign --certificate "${MOK_KEY_NICKNAME}" --in "${KERNEL_IMAGE}" --sign --out "${KERNEL_IMAGE}.signed"
+    mv --verbose "${KERNEL_IMAGE}.signed" "${KERNEL_IMAGE}"
+
+}
+sigining_cachyos_kernel "${@}"
