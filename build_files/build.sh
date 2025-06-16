@@ -14,7 +14,7 @@ set -ouex pipefail
 # dnf -y config-manager addrepo --from-repofile="https://negativo17.org/repos/fedora-multimedia.repo
 # Enabling needed COPRs
 dnf -y copr enable bieszczaders/kernel-cachyos
-dnf-y  copr enable bieszczaders/kernel-cachyos-addons
+dnf -y  copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable pgdev/ghostty
 dnf -y copr enable peterwu/iosevka
 dnf -y copr enable solopasha/hyprland
