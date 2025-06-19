@@ -21,6 +21,7 @@ dnf -y copr enable solopasha/hyprland
 dnf -y copr enable tofik/nwg-shell
 dnf -y copr enable atim/starship
 dnf -y copr enable peterwu/iosevka
+dnf -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
 # Installing extra packages over Workstation
 dnf -y install \
@@ -30,7 +31,9 @@ qt6-qtwayland qt5-qtwayland copyq lsd ImageMagick GraphicsMagick swww wlogout wl
 nwg-clipman nwg-shell-config nwg-drawer python-psutil fd brightnessctl btrbk micro restic bat cosmic-term starship \
 swaync cargo satty vips uwsm breeze-gtk plasma-breeze rsms-inter{,-vf}-fonts jetbrains-mono-fonts-all iosevka-etoile-fonts \
 meson cmake scdoc dmenu python3-pyxdg python3-dbus gtk3-devel gtk4-devel gobject-introspection-devel gtk-layer-shell-devel \
-kdeconnectd kde-connect-nautilus alacritty kitty btrbk zoxide direnv opendoas
+kdeconnectd kde-connect-nautilus alacritty kitty btrbk zoxide direnv opendoas niri xwayland-satellite swayidle swaylock \
+swaybg xfce-polkit lxqt-policykit restic ghostty brave-browser micro --best --allowerasing
+
 #dnf -y install libcap-ng libcap-ng-devel procps-ng procps-ng-devel cachyos-ksm-settings kernel-cachyos kernel-cachyos-devel-matched
 
 #pushd /etc/yum.repos.d || return
