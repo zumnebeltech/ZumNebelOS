@@ -32,7 +32,7 @@ nwg-clipman nwg-shell-config nwg-drawer python-psutil fd brightnessctl btrbk mic
 swaync cargo satty vips uwsm breeze-gtk plasma-breeze rsms-inter{,-vf}-fonts jetbrains-mono-fonts-all iosevka-etoile-fonts \
 meson cmake scdoc dmenu python3-pyxdg python3-dbus gtk3-devel gtk4-devel gobject-introspection-devel gtk-layer-shell-devel \
 kdeconnectd kde-connect-nautilus alacritty kitty btrbk zoxide direnv opendoas niri xwayland-satellite swayidle swaylock \
-swaybg xfce-polkit lxqt-policykit restic brave-browser micro --allowerasing
+swaybg xfce-polkit lxqt-policykit restic  brave-{browser,keyring} micro --allowerasing
 #dnf -y ghostty --best --allowerasing
 #dnf -y install libcap-ng libcap-ng-devel procps-ng procps-ng-devel cachyos-ksm-settings kernel-cachyos kernel-cachyos-devel-matched
 
