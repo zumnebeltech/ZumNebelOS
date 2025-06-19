@@ -22,6 +22,7 @@ dnf -y copr enable tofik/nwg-shell
 dnf -y copr enable atim/starship
 dnf -y copr enable peterwu/iosevka
 dnf -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+dnf -y check-update make-cache --refresh
 
 # Installing extra packages over Workstation
 dnf -y install \
