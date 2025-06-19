@@ -33,7 +33,7 @@ swaync cargo satty vips uwsm breeze-gtk plasma-breeze rsms-inter{,-vf}-fonts jet
 meson cmake scdoc dmenu python3-pyxdg python3-dbus gtk3-devel gtk4-devel gobject-introspection-devel gtk-layer-shell-devel \
 kdeconnectd kde-connect-nautilus alacritty kitty btrbk zoxide direnv opendoas niri xwayland-satellite swayidle swaylock \
 swaybg xfce-polkit lxqt-policykit restic brave-browser micro
-dnf -y ghostty --best --allowerasing
+#dnf -y ghostty --best --allowerasing
 #dnf -y install libcap-ng libcap-ng-devel procps-ng procps-ng-devel cachyos-ksm-settings kernel-cachyos kernel-cachyos-devel-matched
 
 #pushd /etc/yum.repos.d || return
